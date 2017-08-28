@@ -1,0 +1,12 @@
+version: '2'
+services:
+  shop-inventry:
+    image:
+      shop-inventry
+    ports:
+        - "9094:8085"
+  shop-order:
+      image:
+        shop-order
+      ports:
+        - "8081:8082"
