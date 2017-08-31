@@ -1,19 +1,19 @@
 Starter App for DDD demo
 
-#Basic installations
+# Basic installations #
 1. Install Latest Vagrant (https://www.vagrantup.com/downloads.html)
 2. Install latest VirtualBox(https://www.virtualbox.org/)
 3. Run `vagrant up`
 4. After the VM is up do `vagrant ssh`
 5. Check if command `docker info` is successful.
 
-#To run rabbitmq inside VM
+# To run rabbitmq inside VM #
 
 1. `vagrant ssh`
 2. `docker run -d --hostname rabbitmqserver --name rabbitmq -p 5672:5672 rabbitmq:latest`
 
 
-#To run any service inside VM
+# To run any service inside VM #
 1. `vagrant ssh`
 2. `cd /vagrant`
 3. go to respective service folder
@@ -27,7 +27,7 @@ Starter App for DDD demo
     `eg. docker run --name orderservice -p 8082:8082 eshop-order-image`
     
     
-#To run all service together in single network
+# To run all service together in single network #
 
 1. `vagrant ssh`
 2. `docker network create shopnet`
