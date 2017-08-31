@@ -1,12 +1,17 @@
 version: '2'
 services:
-  shop-inventry:
+  eshop-order:
     image:
-      shop-inventry
+      eshop-order
     ports:
-        - "9094:8085"
-  shop-order:
+        - "9094:9099"
+  eshop-order-query:
       image:
-        shop-order
+        eshop-order-query
       ports:
         - "8081:8082"
+  rabitmq:
+    image:
+      rabmitmq
+    ports:
+      - "6001-6099"

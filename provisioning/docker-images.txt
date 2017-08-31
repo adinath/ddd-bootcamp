@@ -17,3 +17,4 @@ gcr.io/google_containers/hyperkube-amd64:v1.2.1
 gcr.io/google_containers/pause:2.0
 gcr.io/google_containers/etcd-amd64:2.2.1
 quay.io/coreos/flannel:0.5.5
+rabbitmq,latest

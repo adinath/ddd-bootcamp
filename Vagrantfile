@@ -25,6 +25,8 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 9093, host: 9093
   # Prometheus Dashboard
   config.vm.network "forwarded_port", guest: 3000, host: 3000
+  # rabbitmq port
+  config.vm.network "forwarded_port", guest: 5672, host: 5672
 
   config.vm.network "private_network", ip: "192.168.33.10"
 
