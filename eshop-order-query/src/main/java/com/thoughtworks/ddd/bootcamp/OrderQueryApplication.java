@@ -50,6 +50,7 @@ public class OrderQueryApplication {
 
         @EventHandler
         public void handle(OrderCreatedEvent event) {
+            LOG.info("Handling OrderCreatedEvent" + event);
             repository.save(new OrderView(event.getId(), event.getItems()));
         }
 

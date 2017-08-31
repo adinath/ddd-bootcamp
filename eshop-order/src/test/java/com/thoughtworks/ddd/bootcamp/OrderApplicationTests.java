@@ -1,5 +1,6 @@
 package com.thoughtworks.ddd.bootcamp;
 
+import com.thoughtworks.OrderApplication;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;

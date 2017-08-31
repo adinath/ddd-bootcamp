@@ -1,11 +1,9 @@
-package com.thoughtworks.ddd.bootcamp;
+package com.thoughtworks;
 
 
 import com.rabbitmq.client.Channel;
-import com.thoughtworks.domain.aggregate.Order;
 import com.thoughtworks.domain.command.AllocateSKUToOrderCommand;
 import com.thoughtworks.domain.command.CreateOrderCommand;
-import com.thoughtworks.domain.command.handler.AllocateSKUToOrderCommandHandler;
 import com.thoughtworks.domain.event.CartCheckoutEvent;
 import com.thoughtworks.domain.event.SKUAllocatedToOrderItemEvent;
 import org.axonframework.amqp.eventhandling.DefaultAMQPMessageConverter;
@@ -13,8 +11,6 @@ import org.axonframework.amqp.eventhandling.spring.SpringAMQPMessageSource;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
-import org.axonframework.eventhandling.saga.repository.jpa.SagaEntry;
-import org.axonframework.eventsourcing.eventstore.jpa.DomainEventEntry;
 import org.axonframework.serialization.Serializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,9 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,9 +30,6 @@ import java.util.UUID;
 @SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
-@EntityScan(basePackageClasses = {DomainEventEntry.class, SagaEntry.class})
-@ComponentScan(basePackageClasses = {Order.class,
-        AllocateSKUToOrderCommandHandler.class})
 public class OrderApplication {
 
     private final static Logger LOG = LoggerFactory.getLogger(OrderApplication.class);

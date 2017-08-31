@@ -1,11 +1,11 @@
 # Dockerfile - totp service
 FROM java:8-jre
 
-ENV JAR_NAME eshop-order-1.0.jar
+ENV JAR_NAME eshop-order.jar
 
 COPY libs/$JAR_NAME /$JAR_NAME
 
-EXPOSE 8080 8080
+EXPOSE 8081 8081
 
-ENTRYPOINT ["java", "-jar", "/eshop-order-1.0.jar"]
+ENTRYPOINT ["java", "-jar", "/eshop-order.jar"]
 CMD []

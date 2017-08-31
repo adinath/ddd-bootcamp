@@ -11,11 +11,14 @@ import java.util.List;
 public class OrderView {
 
     @Id
-    private final String id;
+    private String id;
 
     @CollectionTable
     @Embedded
-    private final List<Item> items;
+    private List<Item> items;
+
+    public OrderView() {
+    }
 
     public OrderView(String id, List<Item> items) {
 
