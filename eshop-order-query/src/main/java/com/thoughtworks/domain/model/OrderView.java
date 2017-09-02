@@ -1,10 +1,7 @@
 package com.thoughtworks.domain.model;
 
 
-import javax.persistence.CollectionTable;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -13,8 +10,7 @@ public class OrderView {
     @Id
     private String id;
 
-    @CollectionTable
-    @Embedded
+    @Transient
     private List<Item> items;
 
     public OrderView() {
