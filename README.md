@@ -27,6 +27,13 @@ Starter App for DDD demo
     `eg. docker run --name orderservice -p 8082:8082 eshop-order-image`
     
     
+7. Alternate way to run from parent directory
+
+    `./build_service {service_name}`
+    
+    This will run step 4 and 5 on service name given
+    
+    
 # To run all service together in single network #
 
 1. `vagrant ssh`
@@ -35,5 +42,12 @@ Starter App for DDD demo
 4. While running individual service, use network name to start
     `docker run --network shopnet --name orderservice -p 8082:8082 eshop-order-image`
 5. To test if services are started use `docker ps`
+
+# To create new service #
+
+`./create_service {service_name} {port}`
+
+This will create new gradle project in the directory same as service_name. 
+It will also create dockerfile for that project
 
 

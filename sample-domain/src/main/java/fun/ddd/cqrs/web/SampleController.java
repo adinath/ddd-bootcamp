@@ -17,8 +17,7 @@ public class SampleController {
 
     @Autowired
     public SampleController(CommandGateway gateway) {
-
-        this.gateway = gateway;
+      this.gateway = gateway;
     }
 
     @RequestMapping(value = "/create", method = POST)
