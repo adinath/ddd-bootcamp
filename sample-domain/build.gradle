@@ -32,6 +32,10 @@ buildscript {
     }
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}
+
 task copyDockerFile(type: Copy) {
     from './Dockerfile'
     into 'build'

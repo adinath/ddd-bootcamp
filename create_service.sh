@@ -13,6 +13,7 @@ mkdir -p src/main/java
 mkdir -p src/test/java
 
 cp ../sample-domain/build.gradle .
+cp ../sample-domain/gradlew .
 
 echo '# Dockerfile - totp service
 FROM java:8-jre
